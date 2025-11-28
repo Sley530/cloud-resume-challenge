@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name — Resume</title>
+    <meta name="description" content="Professional resume for Your Name" />
+
+    <!-- Pico.css (minimal, nice defaults) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured data (update placeholders) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "jobTitle": "Your Target Role",
+        "email": "mailto:your.email@example.com",
+        "url": "https://your-portfolio-or-linkedin.example.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/your-handle/",
+          "https://github.com/your-handle"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "City",
+          "addressRegion": "ST",
+          "addressCountry": "US"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container" id="resume">
+      <header class="resume-header">
+        <div>
+          <h1>Your Name</h1>
+          <p class="subtitle">Cloud/DevOps Engineer</p>
+        </div>
+        <button class="contrast outline no-print" onclick="window.print()" title="Print or Save as PDF">
+          Download PDF
+        </button>
+      </header>
+
+      <!-- Contact box -->
+      <section aria-labelledby="contact-title" class="contact-card">
+        <h2 id="contact-title">Contact</h2>
+        <ul class="contact-list">
+          <li>✉️ <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li>📞 <a href="tel:+11234567890">(+1) 123-456-7890</a></li>
+          <li>📍 City, ST</li>
+          <li>
+            🔗
+            <a href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noreferrer">LinkedIn</a>
+            ·
+            <a href="https://github.com/your-handle" target="_blank" rel="noreferrer">GitHub</a>
+            ·
+            <a href="https://your-portfolio-or-linkedin.example.com/" target="_blank" rel="noreferrer">Portfolio</a>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="summary-title" class="summary">
+        <h2 id="summary-title">Summary</h2>
+        <p>
+          Cloud-focused engineer with hands-on experience building serverless apps, IaC, and CI/CD on AWS. Passionate about reliability, automation, and security. Currently completing the Cloud Resume Challenge.
+        </p>
+      </section>
+
+      <div class="resume-grid">
+        <!-- Main column: Experience & Projects -->
+        <section aria-labelledby="experience-title" class="main-col">
+          <h2 id="experience-title">Experience</h2>
+
+          <article class="item">
+            <header class="item-header">
+              <h3>Company Name · Role Title</h3>
+              <div class="meta">
+                <span>City, ST</span>
+                <span class="dot">•</span>
+                <time datetime="2024-01">Jan 2024</time>
+                –
+                <time datetime="2025-11">Present</time>
+              </div>
+            </header>
+            <ul>
+              <li>Built and deployed a serverless API using AWS Lambda, API Gateway, and DynamoDB; reduced costs by 40% compared to a containerized baseline.</li>
+              <li>Automated infrastructure provisioning with Terraform, introducing reusable modules and CI validation steps.</li>
+              <li>Implemented GitHub Actions for test, build, and deploy across dev/stage/prod with branch protections.</li>
+            </ul>
+            <p class="keywords">
+              AWS · Lambda · API Gateway · DynamoDB · Terraform · GitHub Actions · Python/Node.js
+            </p>
+          </article>
+
+          <article class="item">
+            <header class="item-header">
+              <h3>Organization · Cloud Intern</h3>
+              <div class="meta">
+                <span>City, ST</span>
+                <span class="dot">•</span>
+                <time datetime="2023-06">Jun 2023</time>
+                –
+                <time datetime="2023-12">Dec 2023</time>
+              </div>
+            </header>
+            <ul>
+              <li>Wrote observability dashboards in CloudWatch and alarms via SNS for on-call response.</li>
+              <li>Hardened S3 buckets with least-privilege IAM and bucket policies, enabling access logs.</li>
+              <li>Created a cost report with AWS Budgets and tagging policy; cut monthly spend by 15%.</li>
+            </ul>
+            <p class="keywords">CloudWatch · IAM · S3 · Cost Optimization</p>
+          </article>
+
+          <h2 id="projects-title">Projects</h2>
+          <article class="item">
+            <header class="item-header">
+              <h3>Cloud Resume Challenge</h3>
+              <div class="meta">
+                <a href="#">Live</a>
+                <span class="dot">•</span>
+                <a href="#">Source</a>
+              </div>
+            </header>
+            <ul>
+              <li>Static website hosted on S3 + CloudFront with HTTPS; IaC managed via Terraform.</li>
+              <li>Visitor counter using Lambda + DynamoDB + API Gateway; integrated with frontend.</li>
+              <li>End-to-end CI/CD from PR checks to production deploys using GitHub Actions.</li>
+            </ul>
+            <p class="keywords">S3 · CloudFront · Route 53 · Lambda · DynamoDB · Terraform · GitHub Actions</p>
+          </article>
+        </section>
+
+        <!-- Sidebar: Skills & Education -->
+        <aside class="sidebar" aria-labelledby="skills-title">
+          <section>
+            <h2 id="skills-title">Skills</h2>
+            <article class="item">
+              <ul class="skills">
+                <li>AWS (IAM, S3, Lambda, API Gateway, DynamoDB, CloudFront)</li>
+                <li>IaC: Terraform, AWS CDK</li>
+                <li>CI/CD: GitHub Actions</li>
+                <li>Languages: Python, JavaScript/TypeScript</li>
+                <li>Containers: Docker, ECR</li>
+                <li>Monitoring: CloudWatch, X-Ray</li>
+              </ul>
+            </article>
+          </section>
+
+          <section aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+            <div class="edu item">
+              <h3>University Name</h3>
+              <div class="meta">
+                <span>B.S. in Computer Science</span>
+                <span class="dot">•</span>
+                <time datetime="2020-05">May 2020</time>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="certs-title">
+            <h2 id="certs-title">Certifications</h2>
+            <article class="item">
+              <ul>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>AWS Certified Solutions Architect – Associate</li>
+              </ul>
+            </article>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="no-print small center" id="last-update">
+        <script>
+          // Optionally show last website deployment date
+          document.getElementById('last-update').textContent = "Last Resume Update: " + new Date(document.lastModified).toLocaleDateString();
+        </script>
+      </footer>
+    </main>
+
+    <!-- No external JS required; print handled inline via the button -->
+  </body>
+  </html>
