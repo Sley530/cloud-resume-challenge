@@ -17,8 +17,10 @@ Source: This repo (main branch)
 - Structured data (JSON‑LD Person) to improve SEO/ATS parsing
 
 Files:
-- `index.html` — Resume content and structure
-- `styles.css` — Layout, theme tuning, print styles, dark mode
+- `frontend/index.html` — Resume content and structure
+- `frontend/css/styles.css` — Layout, theme tuning, print styles, dark mode
+- `frontend/assets/` — Static assets (images, icons) you may add later
+- `frontend/js/` — Placeholder for future interactive features (e.g., visitor counter UI)
 
 ## Why this project
 
@@ -57,7 +59,7 @@ The Cloud Resume Challenge is a practical way to show real cloud skills. Instead
 
 ## How to view locally
 
-- Open `index.html` in your browser (double‑click from File Explorer).
+- Open `frontend/index.html` in your browser (double‑click from File Explorer).
 
 Optional — Print to PDF
 - Click “Download PDF” (opens the browser’s print dialog)
