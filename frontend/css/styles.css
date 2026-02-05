@@ -282,12 +282,48 @@
   border-bottom: none;
 }
 
-.sidebar section[aria-labelledby="certs-title"] li::before {
+/* Cert icons handled by .cert-complete and .cert-progress classes */
+
+/* Certifications */
+.certs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.certs-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.75rem;
+  position: relative;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.certs-list li:last-child {
+  border-bottom: none;
+}
+
+.cert-complete::before {
   content: "✓";
   position: absolute;
   left: 0;
   color: var(--primary-color);
   font-weight: bold;
+  font-size: 1rem;
+}
+
+.cert-progress::before {
+  content: "⟳";
+  position: absolute;
+  left: 0;
+  color: #f59e0b;
+  font-size: 1.1rem;
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Utilities */
@@ -302,6 +338,59 @@ footer.small {
   border-top: 1px solid var(--border-light);
   color: var(--text-muted);
 }
+
+/* Scroll animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger animation delays for items */
+.item:nth-child(1) { transition-delay: 0s; }
+.item:nth-child(2) { transition-delay: 0.1s; }
+.item:nth-child(3) { transition-delay: 0.2s; }
+.item:nth-child(4) { transition-delay: 0.3s; }
+.item:nth-child(5) { transition-delay: 0.4s; }
+.item:nth-child(6) { transition-delay: 0.5s; }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
@@ -403,5 +492,12 @@ footer.small {
 
   footer.small {
     border-top-color: #e5e7eb !important;
+  }
+
+  /* Disable animations for print */
+  .fade-in, .slide-in-left, .slide-in-right, .scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
