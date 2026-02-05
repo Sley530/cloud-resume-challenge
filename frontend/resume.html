@@ -44,6 +44,7 @@
     <!-- Back to Home link -->
     <nav class="resume-nav no-print">
       <a href="index.html" class="back-home">← Back to Home</a>
+      <a href="blog.html" class="back-home">Blog</a>
     </nav>
 
     <main class="container" id="resume">
@@ -59,8 +60,10 @@
             <p class="subtitle">IT Engineer</p>
           </div>
         </div>
-        <button class="contrast outline no-print" onclick="downloadPDF()" title="Download as PDF">
+        <button class="contrast outline no-print download-btn" onclick="downloadPDF(); incrementDownloadCount();" title="Download as PDF">
+          <span class="download-icon">⬇️</span>
           Download PDF
+          <span class="download-badge"><span id="download-counter">0</span></span>
         </button>
       </header>
 
@@ -248,5 +251,6 @@
 
     <!-- External JavaScript -->
     <script src="./js/main.js"></script>
+    <script src="./js/counters.js"></script>
   </body>
   </html>

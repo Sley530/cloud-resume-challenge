@@ -38,6 +38,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .nav-logo {
@@ -604,6 +605,87 @@
   }
 
   .skill-card p {
+    color: #9ca3af;
+  }
+}
+
+/* View Counter Badge */
+.view-counter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-dark, #1f2937);
+  animation: fadeIn 1s ease-out;
+}
+
+.view-icon {
+  font-size: 1.1rem;
+}
+
+#view-counter {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--primary-color, #667eea);
+  min-width: 2ch;
+}
+
+.view-label {
+  color: var(--text-muted, #6b7280);
+}
+
+/* Nav Visitor Counter (top right) */
+.nav-visitor-count {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.15));
+  border: 1px solid rgba(102, 126, 234, 0.25);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-visitor-count .visitor-icon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--primary-color, #667eea);
+}
+
+.nav-visitor-count #view-counter {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--primary-color, #667eea);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .view-counter-badge {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    border-color: rgba(102, 126, 234, 0.4);
+    color: #e5e7eb;
+  }
+
+  .view-label {
     color: #9ca3af;
   }
 }

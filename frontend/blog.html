@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — Wesley's Tech Adventures</title>
+    <meta name="description" content="Personal blog about my journey in tech - stories, lessons, and adventures from Paul-Wesley Jeanty" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="blog-nav">
+      <div class="blog-nav-container">
+        <ul class="blog-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </div>
+      <div class="nav-visitor-count">
+        <svg class="visitor-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        <span id="view-counter">0</span>
+      </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-hero">
+      <div class="blog-hero-content">
+        <h1 class="blog-title">Wesley's Tech Adventures 🚀</h1>
+        <p class="blog-subtitle">Stories, lessons, and random thoughts from my journey in tech</p>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <main class="blog-container">
+
+      <!-- Featured Post -->
+      <article class="blog-post featured" data-post-id="cloud-guy">
+        <div class="post-badge">✨ Latest</div>
+        <h2 class="post-title">The Day I Accidentally Became the "Cloud Guy"</h2>
+        <div class="post-meta">
+          <span class="post-date">📅 January 15, 2026</span>
+          <span class="post-read-time">☕ 1 min read</span>
+        </div>
+        <p class="post-excerpt">
+          It all started when my manager said, "Hey Wesley, can you just move this one thing to the cloud?"
+          Famous last words. Three months later, I was knee-deep in Azure documentation, had memorized
+          more acronyms than I thought existed (IaaS, PaaS, SaaS, AaaS... okay I made that last one up),
+          and somehow became the go-to person for anything cloud-related.
+        </p>
+        <p>
+          The truth is, I never planned to specialize in cloud infrastructure. I was happily troubleshooting
+          network issues and resetting passwords (the true backbone of IT, don't @ me). But here's what
+          I've learned: sometimes the best career moves happen when you say "yes" to the weird requests.
+        </p>
+        <blockquote class="post-quote">
+          "The cloud is just someone else's computer" — every IT person ever, usually while crying
+        </blockquote>
+        <div class="post-interactions">
+          <button class="interaction-btn" data-post-id="cloud-guy" data-type="heart">
+            <span class="interaction-icon">❤️</span>
+            <span class="interaction-count">0</span>
+          </button>
+          <button class="interaction-btn" data-post-id="cloud-guy" data-type="thumbsup">
+            <span class="interaction-icon">👍</span>
+            <span class="interaction-count">0</span>
+          </button>
+          <button class="interaction-btn" data-post-id="cloud-guy" data-type="fire">
+            <span class="interaction-icon">🔥</span>
+            <span class="interaction-count">0</span>
+          </button>
+          <button class="interaction-btn" data-post-id="cloud-guy" data-type="laugh">
+            <span class="interaction-icon">😂</span>
+            <span class="interaction-count">0</span>
+          </button>
+          <button class="interaction-btn" data-post-id="cloud-guy" data-type="clap">
+            <span class="interaction-icon">👏</span>
+            <span class="interaction-count">0</span>
+          </button>
+        </div>
+        <a href="#stories-grid" class="read-more">Read more stories ↓</a>
+      </article>
+
+      <!-- Post Grid -->
+      <div id="stories-grid" class="posts-grid">
+
+        <article class="blog-post" data-post-id="monitor-fix">
+          <div class="post-emoji">🔥</div>
+          <h2 class="post-title">That Time I Fixed a "Broken" Computer by Turning On the Monitor</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 December 28, 2025</span>
+            <span class="post-read-time">☕ 30 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            A user called in absolute panic. "MY COMPUTER IS DEAD! EVERYTHING IS GONE!"
+            I rushed over, heart pounding, ready to perform data recovery surgery.
+            The monitor was off. That's it. The monitor was just... off.
+          </p>
+          <p>
+            After a moment of silence that felt like eternity, I calmly pressed the power button on the monitor.
+            The user looked at me like I was a wizard. I nodded sagely and walked away,
+            leaving them to contemplate the mysteries of technology.
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="monitor-fix" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="monitor-fix" data-type="thumbsup">
+              <span class="interaction-icon">👍</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="monitor-fix" data-type="laugh">
+              <span class="interaction-icon">😂</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#HelpDesk</span>
+            <span class="tag">#TrueStories</span>
+            <span class="tag">#ITLife</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-post-id="cert-journey">
+          <div class="post-emoji">📚</div>
+          <h2 class="post-title">My Certification Journey: A Love-Hate Relationship</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 November 10, 2025</span>
+            <span class="post-read-time">☕ 45 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            Let me tell you about the time I spent 3 months studying for a certification,
+            convinced I was going to fail spectacularly, only to pass with flying colors.
+            Then spent the next week forgetting everything I learned. Classic.
+          </p>
+          <p>
+            The secret nobody tells you about certifications: it's not about memorizing everything.
+            It's about knowing enough to Google the right thing when you need it.
+            The cert just proves you know what questions to ask.
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="cert-journey" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="cert-journey" data-type="thumbsup">
+              <span class="interaction-icon">👍</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="cert-journey" data-type="clap">
+              <span class="interaction-icon">👏</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#Certifications</span>
+            <span class="tag">#Learning</span>
+            <span class="tag">#CareerGrowth</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-post-id="home-lab">
+          <div class="post-emoji">🛠️</div>
+          <h2 class="post-title">Building My Home Lab: A Story of Ambition vs. Reality</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 October 5, 2025</span>
+            <span class="post-read-time">☕ 30 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            Phase 1: "I'm going to build an amazing home lab with Kubernetes, multiple VMs,
+            and a fully automated CI/CD pipeline!"
+            <br><br>
+            Phase 2: *stares at pile of Raspberry Pis gathering dust*
+            <br><br>
+            Phase 3: "Okay, maybe I'll just set up Pi-hole first..."
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="home-lab" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="home-lab" data-type="thumbsup">
+              <span class="interaction-icon">👍</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="home-lab" data-type="laugh">
+              <span class="interaction-icon">😂</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#HomeLab</span>
+            <span class="tag">#Projects</span>
+            <span class="tag">#RaspberryPi</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-post-id="5-things">
+          <div class="post-emoji">💡</div>
+          <h2 class="post-title">5 Things I Wish Someone Told Me When I Started in IT</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 September 20, 2025</span>
+            <span class="post-read-time">☕ 30 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            1. Soft skills matter more than you think<br>
+            2. Documentation is your best friend (and worst enemy)<br>
+            3. It's okay to say "I don't know, but I'll find out"<br>
+            4. Take breaks. Your brain needs buffer time<br>
+            5. The help desk experience is invaluable, even when it doesn't feel like it
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="5-things" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="5-things" data-type="thumbsup">
+              <span class="interaction-icon">👍</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="5-things" data-type="clap">
+              <span class="interaction-icon">👏</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#CareerAdvice</span>
+            <span class="tag">#ITTips</span>
+            <span class="tag">#Lessons</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-post-id="gaming-it">
+          <div class="post-emoji">🎮</div>
+          <h2 class="post-title">How Gaming Made Me a Better IT Professional</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 August 15, 2025</span>
+            <span class="post-read-time">☕ 30 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            Hear me out: years of troubleshooting why games wouldn't run on my PC
+            taught me more about hardware, drivers, and system optimization than
+            any formal training. When a user says "it's not working," I channel
+            my 12-year-old self trying to run Crysis on a potato.
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="gaming-it" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="gaming-it" data-type="fire">
+              <span class="interaction-icon">🔥</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="gaming-it" data-type="laugh">
+              <span class="interaction-icon">😂</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#Gaming</span>
+            <span class="tag">#Skills</span>
+            <span class="tag">#Troubleshooting</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-post-id="why-blog">
+          <div class="post-emoji">🌟</div>
+          <h2 class="post-title">Why I Started This Blog (Finally)</h2>
+          <div class="post-meta">
+            <span class="post-date">📅 July 1, 2025</span>
+            <span class="post-read-time">☕ 45 sec read</span>
+          </div>
+          <p class="post-excerpt">
+            Every IT person has stories. The absurd tickets. The miraculous fixes.
+            The times we pretended we knew what we were doing (spoiler: we often don't).
+            This blog is my attempt to document the journey, share some laughs,
+            and maybe help someone else who's just starting out.
+          </p>
+          <p>
+            Welcome to my corner of the internet. Grab some coffee, and let's talk tech. ☕
+          </p>
+          <div class="post-interactions">
+            <button class="interaction-btn" data-post-id="why-blog" data-type="heart">
+              <span class="interaction-icon">❤️</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="why-blog" data-type="thumbsup">
+              <span class="interaction-icon">👍</span>
+              <span class="interaction-count">0</span>
+            </button>
+            <button class="interaction-btn" data-post-id="why-blog" data-type="clap">
+              <span class="interaction-icon">👏</span>
+              <span class="interaction-count">0</span>
+            </button>
+          </div>
+          <div class="post-tags">
+            <span class="tag">#Welcome</span>
+            <span class="tag">#Introduction</span>
+            <span class="tag">#FirstPost</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Reach Out Section -->
+      <section class="newsletter-section">
+        <div class="newsletter-content">
+          <h3>💬 Enjoying the Stories?</h3>
+          <p>Got feedback, questions, or just want to say hi? I'd love to hear from you!</p>
+          <div class="reachout-buttons">
+            <a href="mailto:jpwesley530@gmail.com" class="reachout-btn primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Send Feedback
+            </a>
+            <a href="https://www.linkedin.com/in/sley530/" target="_blank" rel="noreferrer" class="reachout-btn secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              Let's Connect
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+      <p>Made with ☕ and occasional frustration by Wesley</p>
+      <p>© 2026 Paul-Wesley Jeanty. All stories are (mostly) true.</p>
+    </footer>
+
+    <script src="./js/counters.js"></script>
+  </body>
+</html>

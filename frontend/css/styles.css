@@ -83,6 +83,35 @@
   padding: 0.5rem 1rem;
 }
 
+/* Download button with counter */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.download-icon {
+  font-size: 1rem;
+}
+
+.download-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color, #2563eb);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  min-width: 1.5rem;
+}
+
+#download-counter {
+  font-weight: 600;
+}
+
 /* Contact bar - clean inline layout */
 .contact-bar {
   display: flex;
