@@ -10,6 +10,26 @@
   --bg-subtle: rgba(0, 0, 0, 0.02);
 }
 
+/* Resume page navigation */
+.resume-nav {
+  background: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+}
+
+.back-home {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+.back-home:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
 /* Base container */
 #resume.container {
   max-width: var(--max-width);
@@ -99,6 +119,159 @@
   }
   .contact-bar .divider {
     display: none;
+  }
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  #resume.container {
+    padding: 1.5rem 1rem 2rem !important;
+    max-width: 100% !important;
+  }
+
+  .resume-header {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+
+  .header-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .header-gif {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .resume-header h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .resume-header .subtitle {
+    font-size: 1rem !important;
+  }
+
+  .resume-header button {
+    width: 100% !important;
+  }
+
+  .contact-bar {
+    flex-direction: column !important;
+    gap: 0.4rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .contact-bar .divider {
+    display: none !important;
+  }
+
+  .summary {
+    padding: 1rem !important;
+    margin: 0 0 1.5rem !important;
+  }
+
+  .summary h2 {
+    font-size: 1rem !important;
+  }
+
+  .summary p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .resume-grid {
+    display: block !important;
+  }
+
+  .main-col,
+  .sidebar {
+    width: 100% !important;
+  }
+
+  .sidebar {
+    margin-top: 1.5rem !important;
+  }
+
+  .main-col > h2,
+  .sidebar > section > h2 {
+    font-size: 0.9rem !important;
+  }
+
+  .item {
+    padding: 1rem !important;
+  }
+
+  .item-header h3 {
+    font-size: 1rem !important;
+  }
+
+  .meta {
+    font-size: 0.8rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .item ul {
+    padding-left: 1.25rem !important;
+  }
+
+  .item li {
+    font-size: 0.85rem !important;
+  }
+
+  .keywords {
+    font-size: 0.75rem !important;
+  }
+
+  .skills li {
+    font-size: 0.85rem !important;
+    padding: 0.4rem 0 !important;
+  }
+
+  .edu.item h3 {
+    font-size: 0.95rem !important;
+  }
+
+  .certs-list li {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  #resume.container {
+    padding: 1rem 0.75rem 1.5rem !important;
+  }
+
+  .resume-header h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .header-gif {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .contact-bar {
+    font-size: 0.85rem !important;
+  }
+
+  .summary {
+    padding: 0.875rem;
+  }
+
+  .item {
+    padding: 0.875rem;
+  }
+
+  .item-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .item li {
+    font-size: 0.8rem;
   }
 }
 
@@ -500,4 +673,117 @@ footer.small {
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* PDF generation styles - compact for one page */
+.generating-pdf #resume.container,
+body.generating-pdf #resume {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.generating-pdf .no-print {
+  display: none !important;
+}
+
+.generating-pdf .resume-header {
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.generating-pdf .resume-header h1 {
+  font-size: 1.5rem !important;
+}
+
+.generating-pdf .resume-header .subtitle {
+  font-size: 0.95rem !important;
+}
+
+.generating-pdf .contact-bar {
+  padding: 0.5rem 0 !important;
+  margin-bottom: 0.75rem !important;
+  font-size: 0.8rem !important;
+}
+
+.generating-pdf .summary {
+  margin-bottom: 0.75rem !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.generating-pdf .summary h2 {
+  font-size: 0.85rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.generating-pdf .summary p {
+  font-size: 0.8rem !important;
+  line-height: 1.4 !important;
+}
+
+.generating-pdf .resume-grid {
+  gap: 0.75rem !important;
+}
+
+.generating-pdf .main-col > h2,
+.generating-pdf .sidebar > section > h2 {
+  font-size: 0.8rem !important;
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.generating-pdf .item {
+  padding: 0.5rem 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.generating-pdf .item-header h3 {
+  font-size: 0.85rem !important;
+}
+
+.generating-pdf .meta {
+  font-size: 0.7rem !important;
+}
+
+.generating-pdf .item ul {
+  margin: 0.25rem 0 !important;
+  padding-left: 1rem !important;
+}
+
+.generating-pdf .item li {
+  font-size: 0.75rem !important;
+  margin-bottom: 0.15rem !important;
+  line-height: 1.3 !important;
+}
+
+.generating-pdf .keywords {
+  font-size: 0.7rem !important;
+  margin-top: 0.25rem !important;
+}
+
+.generating-pdf .skills li {
+  font-size: 0.75rem !important;
+  padding: 0.2rem 0 !important;
+}
+
+.generating-pdf .edu.item h3 {
+  font-size: 0.85rem !important;
+}
+
+.generating-pdf .certs-list li {
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0 !important;
+  padding-left: 1.25rem !important;
+}
+
+.generating-pdf footer {
+  display: none !important;
+}
+
+/* Ensure all animated elements are visible for PDF */
+.generating-pdf .fade-in,
+.generating-pdf .slide-in-left,
+.generating-pdf .slide-in-right,
+.generating-pdf .scale-in {
+  opacity: 1 !important;
+  transform: none !important;
 }
