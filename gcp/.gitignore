@@ -7,9 +7,18 @@ gcp-key.json
 *.tfstate
 *.tfstate.backup
 terraform.tfvars
+tmp/
 
 # Ansible vault secrets (encrypted file is OK, but exclude just in case)
 playbooks/vaults/secrets.yml
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+venv/
+.venv/
 
 # OS files
 .DS_Store

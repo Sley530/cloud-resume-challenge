@@ -19,3 +19,9 @@ variable "domain_name" {
   type        = string
   default     = ""
 }
+
+variable "firestore_location" {
+  description = "Firestore database location (multi-region or single region)"
+  type        = string
+  default     = "nam5"
+}

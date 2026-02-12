@@ -12,3 +12,8 @@ output "http_url" {
   description = "HTTP URL via load balancer"
   value       = "http://${google_compute_global_address.website_ip.address}"
 }
+
+output "visitor_counter_url" {
+  description = "Cloud Function URL for the visitor counter API"
+  value       = google_cloudfunctions2_function.visitor_counter.url
+}
