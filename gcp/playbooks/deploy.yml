@@ -1,0 +1,65 @@
+---
+# Ansible Playbook — Deploy Cloud Resume to GCP
+# Usage: ansible-playbook playbooks/deploy.yml --ask-vault-pass
+
+- name: Deploy Cloud Resume Challenge to GCP
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars_files:
+    - vaults/secrets.yml
+
+  vars:
+    terraform_dir: "{{ playbook_dir }}/.."
+    gcp_credentials_file: "{{ terraform_dir }}/gcp-key.json"
+
+  tasks:
+    # --------------------------------------------------
+    # 1. Write GCP service account key from vault
+    # --------------------------------------------------
+    - name: Write GCP service account key file
+      ansible.builtin.copy:
+        content: "{{ gcp_service_account_key | to_json }}"
+        dest: "{{ gcp_credentials_file }}"
+        mode: "0600"
+      no_log: true
+
+    # --------------------------------------------------
+    # 2. Export credentials for Terraform google provider
+    # --------------------------------------------------
+    - name: Set GOOGLE_APPLICATION_CREDENTIALS environment
+      ansible.builtin.set_fact:
+        terraform_env:
+          GOOGLE_APPLICATION_CREDENTIALS: "{{ gcp_credentials_file }}"
+
+    # --------------------------------------------------
+    # 3. Terraform Init
+    # --------------------------------------------------
+    - name: Terraform init
+      ansible.builtin.command:
+        cmd: terraform init
+        chdir: "{{ terraform_dir }}"
+      environment: "{{ terraform_env }}"
+
+    # --------------------------------------------------
+    # 4. Terraform Apply
+    # --------------------------------------------------
+    - name: Terraform apply
+      ansible.builtin.command:
+        cmd: terraform apply -auto-approve
+        chdir: "{{ terraform_dir }}"
+      environment: "{{ terraform_env }}"
+      register: tf_apply
+
+    - name: Show Terraform apply output
+      ansible.builtin.debug:
+        var: tf_apply.stdout_lines
+
+    # --------------------------------------------------
+    # 5. Clean up credentials file
+    # --------------------------------------------------
+    - name: Remove GCP key file
+      ansible.builtin.file:
+        path: "{{ gcp_credentials_file }}"
+        state: absent

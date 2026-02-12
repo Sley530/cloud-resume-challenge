@@ -1,1 +1,15 @@
+# GCP service account key
 gcp-key.json
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+
+# Ansible vault secrets (encrypted file is OK, but exclude just in case)
+playbooks/vaults/secrets.yml
+
+# OS files
+.DS_Store
